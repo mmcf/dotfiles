@@ -1,0 +1,7 @@
+#
+# AWS tools environment
+#
+export JAVA_HOME="$(/usr/libexec/java_home)"
+export AWS_RDS_HOME="/opt/boxen/homebrew/Cellar/rds-command-line-tools/1.14.001/libexec"
+export AWS_CREDENTIAL_FILE=$AWS_RDS_HOME/my_aws_creds
+export PATH=$PATH:$AWS_RDS_HOME/bin
