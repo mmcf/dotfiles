@@ -5,6 +5,7 @@
 \echo 'Administrative queries:'
 \echo '======================='
 \echo '\t:settings\t-- Server Settings'
+\echo '\t:schemas\t-- Schema Object Counts (current DB)'
 \echo '\t:conninfo\t-- Server connections'
 \echo '\t:activity\t-- Server activity'
 \echo '\t:locks\t\t-- Lock info'
@@ -21,6 +22,8 @@
 -- Administration queries
 
 \set menu '\\i ~/.psqlrc'
+
+\set schemas 'select distinct table_schema, count(1) from information_schema.tables group by table_schema order by 1;'
 
 \set settings 'select name, setting,unit,context from pg_settings;'
 
