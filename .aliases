@@ -1,0 +1,3 @@
+# AWS aliases
+alias rdsdbs='$AWS_RDS_HOME/bin/rds-describe-db-instances --headers'
+alias rdssnaps='$AWS_RDS_HOME/bin/rds-describe-db-snapshots --headers'
